@@ -1,34 +1,35 @@
 /*
 1.init kelompokAngka sebagai variabel array kosong
-2.buat looping untuk memasukkan array kosong sebanyak 3 kedalam array kelompokAngka
-3.buat looping untuk membaca isi array dari kiri ke kanan
+2.buat looping untuk memasukkan array kosong sebanyak 3 kedalam array kelompokArr
+3.buat looping untuk membaca isi array dari kiri ke kanan dengan index j
     3a. jika array[j] adalah kelipatan 3 maka input ke array kelompok angka dengan index kolom 2
     3b. jika array[j] adalah angka genap  maka input array ke array kelompok angka dengnan index kolom 1
     3c. jika array[j] adalah angka ganjil maka input array ke array kelompok angka dengan index kolom 0
 */
 
 function mengelompokkanAngka(arr) {
-  var kelompokArr = [];
+  var kelompokAngka = [];
 
   for (var i = 0; i < 3; i++) {
-    kelompokArr.push([]);
+    kelompokAngka.push([]);
   }
   //console.log(kelompokArr);
+
   for (var j = 0; j < arr.length; j++) {
     if (arr[j] % 3 === 0) {
       //console.log(kelompokArr);
-      kelompokArr[2].push(arr[j]);
+      kelompokAngka[2].push(arr[j]);
     } else {
       if (arr[j] % 2 === 0) {
-        kelompokArr[0].push(arr[j]);
+        kelompokAngka[0].push(arr[j]);
       }else{if(arr[j]%2!==0){
-        kelompokArr[1].push(arr[j]);
+        kelompokAngka[1].push(arr[j]);
        }
       }
     }
   }
 
-  return kelompokArr;
+  return kelompokAngka;
 }
 
 // TEST CASES
